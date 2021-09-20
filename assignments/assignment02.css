@@ -1,22 +1,23 @@
 /* file: assignment02.css
 	author: adam cossin
 */ 
-
+/*makes background color of entire page skyblue*/
 body {
 	background-color:skyblue;
 }
+/*makes the font of paragraph with id 'igottabeme' in specific font*/
 #igottabeme {
 	font-family: Arial, Helvetica, sans-serif;
 }
-
+/*defines margin for any paragraph with class "classy"*/
 p.classy {
 	margin-left:10px;
 }
-
+/*defines margin for div*/
 div {
 	margin-bottom: 50px;
 }
-
+/*gives all 'span' the properties listed*/
 span {
 	display: inline-block;
 	width: 100px;
@@ -30,24 +31,70 @@ span {
 	border-color:blue;
 	border-width:5px;
 }
+/*gives span class "a" properties in 'span' without including the width and height*/
+span.a {
+	display: inline;
+}
+/*makes span class "b" stack*/
+span.b{
+	position: relative;
+	display: block;
+}
+/*no span class c needs to be included as it will be set to our default*/
+/*positions cat image over all other elements and makes it fixed at the bottom right of the page*/
+img[alt*="cat icon"]{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index:1;
+}
+/*positions dog image relative to where it originally was, and positions it over all other elements*/
+img[alt*="dog icon"]{
+	position: relative;
+	right: 50px;
+	bottom: 150px;
+	z-index:1;
+}
+/*needed to position bird image, as the bird image will be absolute compared to the previous relative item*/
+#positionMe {
+	position:relative;
+}
+/*positions bird image on top of all other elements, and positions it absolutely in terms of the 'positionMe' div*/
+img[alt*="bird icon"]{
+	position: absolute;
+	z-index:1;
+	top: 50px;
+	left: 250px;
+}
+/*positions the nav bar to be 'sticky', meaning it will stay at the top of the page even with scrolling, and gives additonal properties asked for*/
+nav {
+	position: sticky;
+	top:0;
+	background-color: green;
+	opacity: 0.9;
+	padding: 5px;
+	font-size:20px;
+}
 
 /* --- pre-existing css --- */
-.stripey tr:nth-child(even) {
+/*applies the pre-existing classes all to the table*/
+table tr:nth-child(even) {
   background-color: gray;
 }
-.stripey tr:nth-child(odd) {
+table tr:nth-child(odd) {
   background-color: white;
 }
-.stripey th {
+table th {
   color: white;
   background-color: black;
 }
-.mousey td:hover {
+table td:hover {
   background-color: yellow;
 }
-.rightey td {
+table td {
   text-align: right;
 }
-input[type="text"].pinkey:focus {
+/*applies the focus property to the form*/
+input[type=text]:focus {
   background-color: pink;
 }
