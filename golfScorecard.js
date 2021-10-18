@@ -28,8 +28,8 @@ function add1 (elem) {
   }
   calcOverRow(elem);
   calcScoreTotal(elem);
-  calcOverTotal(elem);
-  clear(elem);
+  calcTotalOver(elem);
+  //clear(elem);
 }
 
 //create a "sub1" function
@@ -47,21 +47,23 @@ function sub1 (elem) {
 	}
 	calcOverRow(elem);
 	calcScoreTotal(elem);
-	calcOverTotal(elem);
-	clear(elem);
+	calcTotalOver(elem);
+	//clear(elem);
 }
 
 function clear (elem) {
 	let currentScore = elem.children[2].innerHTML;
-	currentScore=Number.parseInt(currentScore);
+		currentScore=Number.parseInt(currentScore);
 	let currentOver = elem.children[3].innerHTML;
-	currentOver=Number.parseInt(currentOver);
+		currentOver=Number.parseInt(currentOver);
 	let totalScore = document.getElementById('scoreTotal').innerHTML;
-	totalScore=Number.parseInt(totalScore);
-	let totalOver = document.getElementById('overTotal').innerHTML;
-	totalOver=Number.parseInt(totalOver);
-	document.getElementById('scoreTotal').innerHTML = totalScore-currentScore;
-	document.getElementById('overTotal').innerHTML = totalOver-currentOver;
+		totalScore=Number.parseInt(totalScore);
+	//let totalOver = document.getElementById('overTotal').innerHTML;
+		//totalOver=Number.parseInt(totalOver);
+	//if(currentOver<1)
+		//currentOver = 0;
+	//document.getElementById('scoreTotal').innerHTML = totalScore-currentScore;
+	//document.getElementById('overTotal').innerHTML = totalOver-currentOver;
 	elem.children[2].innerHTML = 0;
 	elem.children[3].innerHTML = 0;
 }
@@ -73,9 +75,6 @@ function calcScoreTotal (elem) {
 	oneScore = Number.parseInt(oneScore);
 	if(oneScore == "-")
 		oneScore = 0;
-	else if (oneScore == "0") {
-		oneScore = 0;
-	}
 	totalScore++;
 	document.getElementById('scoreTotal').innerHTML = totalScore;
 }
@@ -87,7 +86,7 @@ function calcTotalOver (elem) {
 	oneOver = Number.parseInt(oneOver);
 	if(oneOver == "-")
 		oneOver = "0";
-	totalOver++;
+	totalOver+=oneOver;
 	document.getElementById('overTotal').innerHTML = totalOver;
 }
 
