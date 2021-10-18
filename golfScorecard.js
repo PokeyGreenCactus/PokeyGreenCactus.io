@@ -43,7 +43,9 @@ function sub1 (elem) {
 	calcTotalOver(elem);
 }
 
+//create a clear function
 function clear (elem) {
+	//get current value in 'score' and 'over' sections on given row and pass them to 'calcScoreTotal' and 'calcTotalOver' functions respectively to update the values of the totals
 	let tempScore = elem.children[2].innerHTML;
 	tempScore = Number.parseInt(tempScore);
 	let tempOver = elem.children[3].innerHTML;
