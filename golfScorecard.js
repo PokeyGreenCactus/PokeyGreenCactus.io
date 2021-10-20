@@ -2,6 +2,7 @@
 //Author: Adam Cossin
 //Contact: racossin@svsu.edu
 //Date: 10/18/2021
+//Program allows users to interact with a golfScorecard app where they can dynamically change their score
 let elem = [];
 
 for(let i=1; i<=18; i++) {
