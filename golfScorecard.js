@@ -51,8 +51,9 @@ function clear (elem) {
 	tempScore = Number.parseInt(tempScore);
 	let tempOver = elem.children[3].innerHTML;
 	tempOver = Number.parseInt(tempOver);
-	calcScoreTotal(tempScore);
-	calcTotalOver(tempOver);
+	//wanted to pass these into the 'calcScoreTotal' and 'calcTotalOver' functions to update the 'total' column values, but this doesn't seem to work
+	//calcScoreTotal(tempScore);
+	//calcTotalOver(tempOver);
 	elem.children[2].innerHTML = 0;
 	elem.children[3].innerHTML = 0;
 }
