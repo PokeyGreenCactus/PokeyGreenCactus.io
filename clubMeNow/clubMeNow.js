@@ -93,6 +93,7 @@ function displayClubDistanceEntryForm(c) {
 function undoLastShot() {
    loadClubDistances();
    clubs.pop();
+   window.location.href = "clubDistanceList.html";
 }
 
 // create a new (default) "clubs" array
