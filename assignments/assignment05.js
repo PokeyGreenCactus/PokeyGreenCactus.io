@@ -91,7 +91,7 @@ function loadContent() {
             "NewDeaths": c.NewDeaths,
             "TotalConfirmed": c.TotalConfirmed,
             "TotalDeaths": c.TotalDeaths,
-            "TotalConfirmedPer100000": c.TotalConfirmedPer100000,
+            "TotalConfirmedPer100000": Number.parseInt(c.TotalConfirmed)/100000,
           });
         }
       }
